@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 10px;
+}
+#se{
+background-color:orange;
+height:200px
+width:100px;
+border-radius:0;
+
+}
+#km{
+background-color:lightcyan;
+height:100px;
+width:400px;
+border-radius:px;
+}
+
+
+.showSlide {  
+            display: none  
+        }  
+            .showSlide img {  
+                width: 100%;  
+            }  
+        .slidercontainer {  
+            max-width: 1000px;  
+            position: relative;  
+            margin: auto;  
+        }  
+        .left, .right {  
+            cursor: pointer;  
+            position: absolute;  
+            top: 50%;  
+            width: auto;  
+            padding: 16px;  
+            margin-top: -22px;  
+            color: white;  
+            font-weight: bold;  
+            font-size: 18px;  
+            transition: 0.6s ease;  
+            border-radius: 0 3px 3px 0;  
+        }  
+        .right {  
+            right: 0;  
+            border-radius: 3px 0 0 3px;  
+        }  
+            .left:hover, .right:hover {  
+                background-color: rgba(115, 115, 115, 0.8);  
+            }  
+        .content {  
+            color: #eff5d4;  
+            font-size: 30px;  
+            padding: 8px 12px;  
+            position: absolute;  
+            top: 10px;  
+            width: 100%;  
+            text-align: center;  
+        }  
+        .active {  
+            background-color: #717171;  
+        }  
+        /* Fading animation */  
+        .fade {  
+            -webkit-animation-name: fade;  
+            -webkit-animation-duration: 1.5s;  
+            animation-name: fade;  
+            animation-duration: 1.5s;  
+        }  
+        @-webkit-keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+        #hb{
+        background-color:black;
+        height:80px;
+        width:210px;
+        
+        }
+        #nj{
+        background-color:#ADFF2F;
+        height:80px;
+        width:450px;
+        }
+       
+        
+        
+     
+        
+        
+       .blink{
+        width:450px;
+        height: 60px;
+        background-color: orange;
+        padding: 15px;	
+        text-align: center;
+        line-height: 50px;
+        }
+        span{
+        font-size: 25px;
+        font-family: fantasy;
+        color: white;
+        animation: blink 1s linear infinite;
+        }
+        @keyframes blink{
+        0%{opacity: 0;}
+        50%{opacity: .5;}
+        100%{opacity: 1;}
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</style>
+</head>
+<body><center>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/* Set the width of each image to 33.33% */
+		.column {
+			float: left;
+			width: 31.33%;
+			padding: 5px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="row">
+		<div class="column">
+			<img src="x.png" style="width:100%">
+		</div>
+		<div class="column">
+			<img src="pl.jpeg" style="width:100%">
+		</div>
+		<div class="column">
+			<img src="f.png" style="width:100%">
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+  
+
+<br><br><br><br><div id="se"><br><br><br><br><br>
+<div id="km"><h3>GOVT FIRST GRADE COLLEGE <br> MALLESHWARAM 18th CROSS,BANGALORE -560032<br>---------------</h3></div>
+<p><b>(AFFILIATED TO BENGALURU CITY UNIVERSITY)</p>
+<p>(MAINTAINED AND REGULATED BY DCTE)</p></b></p><br><br>
+
+<div class="row">
+  <div class="column">
+    <img src="z.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="h.png" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="a.png" alt="Mountains" style="width:100%">
+  </div>
+</div></div>
+<br><br><br><br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_e6qptb87.json"  background="transparent"
+  speed="1"  style="width: 300px; height: 300px;"   autoplay></lottie-player>
+  <br>
+  <br><br><br><br><br><br>
+  
+  <div class="slidercontainer">  
+  <div class="showSlide fade">  
+  <img src="e.png" />  
+  <div class="content"></div>  
+  </div>  
+  <div class="showSlide fade">  
+  <img src="c.png"  />
+  <div class="content"></div>  
+  </div>  
+  
+  <div class="showSlide fade">  
+  <img src="b.png"  />
+  <div class="content"></div>  
+  </div>  
+  <div class="showSlide fade">  
+  <img src="g.jpeg"  />
+  <div class="content"></div>  
+  </div>  
+  
+  <!-- Navigation arrows -->  
+  <a class="left" onclick="nextSlide(-1)">❮</a>  
+  <a class="right" onclick="nextSlide(1)">❯</a>  
+  </div>
+  <br><br><br><br><br><br>
+  <img src="i.jpg" height="45%" width="84%" />
+  
+  
+  <br>
+  
+  
+  
+  <br><br><br><br>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Nep-2020 Presents</title>
+  <style>
+  .container {
+  border: 1px solid black;
+  padding: 20px;
+  width: 500px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  }
+  
+  table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 20px;
+  }
+  
+  th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  }
+  
+  th {
+  background-color: #4CAF50;
+  color: white;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+  <h1>Nep-2020 Presents</h1>
+  <table>
+  <tr>
+  <th>Course Type</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <td>Ability Enhancement Courses</td>
+  <td>Courses to help improve various abilities such as communication, critical thinking, and creativity.</td>
+  </tr>
+  <tr>
+  <td>Skill Enhancement Courses</td>
+  <td>Courses to help develop new skills or improve existing ones, such as programming, graphic design, or public speaking.</td>
+  </tr>
+  <tr>
+  <td>Discipline Courses for Core Subjects</td>
+  <td>Courses focused on specific disciplines within core subjects, such as physics, chemistry, or biology.</td>
+  </tr>
+  <tr>
+  <td>Computer Literacy</td>
+  <td>Courses to help individuals learn basic computer skills, such as using Microsoft Office, browsing the internet, or creating presentations.</td>
+  </tr>
+  </table>
+  </div>
+  </body>
+  </html>
+  <br><br><br><br>
+  <script type="text/javascript">
+  
+  var slide_index = 1;  
+  displaySlides(slide_index);  
+  function nextSlide(n) {  
+  displaySlides(slide_index += n);  
+  }  
+  function currentSlide(n) {  
+  displaySlides(slide_index = n);  
+  }  
+  function displaySlides(n) {  
+  var i;  
+  var slides = document.getElementsByClassName("showSlide");  
+  if (n > slides.length) { slide_index = 1 }  
+  if (n < 1) { slide_index = slides.length }  
+  for (i = 0; i < slides.length; i++) {  
+  slides[i].style.display = "none";  
+  }  
+  slides[slide_index - 1].style.display = "block";  
+  }  </script>
+  
+  <div class="blink"><a href="question.html" ><span><code>3RD SEMESTER QUESTION BANK </code></span></a></div>
+  <br><br><br><br><br><br>
+  <div id="nj"><code>DESIGNED AND DEVELOPED BY NANDISH BC <br>
+     2ND BCOM ' B' SECTION ID-U18CW21C0134<br>-------FRONTEND DEVELOPER ---------<br> </div>
+  
+  </center></body></html>
