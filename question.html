@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+body{
+  background:#eeeee;
+}
+
+#slider{
+  margin:0 auto;
+  width:80%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+img{
+  width:100%;
+}
+
+#dot{
+  margin:0 auto;
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  border-radius:50%;
+  background:#d3d3d3;
+  padding:8px;
+  margin:10px 5px;
+}
+
+.active{
+  background:black;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+
+#heading{
+  display:block;
+  text-align:center;
+  font-size:1.6em;
+  margin:10px 0px;
+
+}
+
+#ss{
+background-color:orange;
+height:70px;
+width:500px;
+
+
+}
+
+#ok{
+background-color:lightgreen;
+height:700px;
+width:250px;
+
+}
+#ko{
+background-color:grey;
+height:200px;
+widdth:700px;
+
+}
+
+
+Resources</style>
+<title></title>
+</head>
+<body>
+
+
+<span id="heading"><center><div id="ss">--WELCOME TO ---- <br>3RD SEMESTER "PRASHNA NIDHI"</span></div><br><br><br><br>
+  <img src="" /><br /><br /><br><br>
+<div id="slider">  
+<div class="slides">  
+  <img src="co.jpeg" width="100%" />
+ </div>
+  
+  <div class="slides">  
+<img src="coo.jpeg" width="100%" />
+</div>
+  
+  <div class="slides">  
+  <img src="cooo.jpeg" width="100%" />
+</div> 
+  
+   <div class="slides">  
+  <img src="coooo.jpeg" width="100%" />
+</div> 
+  
+<div class="slides">  
+  <img src="cooooo.jpeg" width="80%" />
+</div>  
+
+
+  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+ </div>
+
+<script type="text/javascript">index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+ if(index<0){
+   index = slides.length-1;
+ }
+ 
+ if(index>slides.length-1){
+   index = 0;
+ }
+ 
+ for(let i=0;i<slides.length;i++){
+   slides[i].style.display = "none";
+   dot[i].classList.remove("active");
+ }
+ 
+ slides[index].style.display= "block";
+ dot[index].classList.add("active");
+ 
+ index++;
+ 
+ setTimeout(changeSlide,2000);
+ 
+}
+
+changeSlide();
+
+
+</script><br><br><br><center><div id="ok"><center>
+    <code>3RD SEMESTER NEP BCOM QUESTION BANK APPLICABLE FOR BENGALURU CITY UNIVERSITY</code>
+<br><br><br><br>
+    <label for="subject-select">Select Subject:</label>
+    <select id="subject-select"></select>
+<br><br><br><br>
+    <label for="chapter-select">Select Chapter:</label>
+    <select id="chapter-select" disabled></select>
+<br><br><br><br>
+    <label for="question-select">Select Question:</label>
+    <select id="question-select" disabled></select>
+</div></center>
+    <script>
+      const subjectSelect = document.getElementById("subject-select");
+      const chapterSelect = document.getElementById("chapter-select");
+      const questionSelect = document.getElementById("question-select");
+
+      const questions = {
+        "COST ACCOUNTING": {
+          "Introduction to cost accounting ": ["What is cost accounting and how is it used in business?",
+          "What are the different types of costs in cost accounting?",
+          "What is the difference between direct and indirect costs?",
+          "What is a cost object and how is it related to cost accounting?",
+          "How do you calculate the cost of goods sold (COGS) using cost accounting?",
+          "What is the difference between variable and fixed costs?",
+          "How do you calculate the break-even point in cost accounting?",
+          "What is a cost driver and how does it affect costs?",
+          "What is job costing and how is it used in cost accounting?",
+          "What is process costing and how is it used in cost accounting?",
+          "What is activity-based costing (ABC) and how is it used in cost accounting?",
+          "What is standard costing and how is it used in cost accounting?",
+          "What is budgeting and how is it used in cost accounting?",
+          "What is variance analysis and how is it used in cost accounting?",
+          "What is target costing and how is it used in cost accounting?",
+          "What is life-cycle costing and how is it used in cost accounting?",
+          "What is cost-volume-profit (CVP) analysis and how is it used?",
+          "What is absorption costing and how is it different from variable costing?",
+          "What is throughput costing and how is it used in cost accounting?",
+          "What is joint and by-product costing and how is it used in cost accounting?",
+          "What is relevant costing and how is it used in decision making?",
+          "What is incremental analysis and how is it used in cost accounting?",
+          "What is make-or-buy decision and how is it used in cost accounting?",
+          "What is cost behavior and how is it analyzed in cost accounting?",
+          "What are the real-world applications of cost accounting?",
+          "What are the limitations and challenges of cost accounting?"
+          ],
+          "material costing": ["What is material costing and why is it important in business?",
+          "What are the different types of materials costs?",
+          "How do you classify materials in terms of their costs?",
+          "What is the difference between direct and indirect material costs?",
+          "What is the bill of materials and how is it used in material costing?",
+          "What is the difference between purchase order and purchase requisition?",
+          "What are the steps involved in material procurement and how does it affect material costing?",
+          "How do you calculate the cost of materials used in production?",
+          "What is the difference between FIFO and LIFO methods of inventory valuation?",
+          "What is the impact of material waste and scrap on material costing?",
+          "How do you account for defective materials in material costing?",
+          "How do you calculate the reorder point and reorder quantity of materials?",
+          "What is material handling and how does it affect material costing?",
+          "What is material planning and control and how is it used in material costing?",
+          "How do you calculate the economic order quantity (EOQ) and its impact on material costing?",
+          "What is the role of technology in material costing?",
+          "What is material variance and how is it calculated?",
+          "What is material price variance and how is it analyzed?",
+          "What is material usage variance and how is it analyzed?",
+          "What is standard costing and how is it used in material costing?",
+          "What is the difference between actual costing and standard costing?",
+          "What are the limitations and challenges of material costing?",
+          "What is the importance of inventory control in material costing?",
+          "What is the impact of globalization on material costing?",
+          "What is environmental accounting and how does it relate to material costing?"
+          ],
+          "labour costing ": ["What are labour costs and why are they important in business?",
+          "What are the different types of labour costs?",
+          "How do you classify labour costs based on their behavior?",
+          "What is the difference between direct and indirect labour costs?",
+          "How do you calculate the total labour cost for a product or service?",
+          "What is the role of time and motion studies in labour cost analysis?",
+          "What is the difference between time rate and piece rate systems of payment?",
+          "How do you calculate the standard labour cost and what is its significance?",
+          "What is the difference between standard and actual labour cost?",
+          "What is the impact of labour costs on product pricing and profitability?",
+          "How do you allocate labour costs to different products or services?",
+          "What is the role of cost centers and cost pools in labour cost allocation?",
+          "What is the difference between job costing and process costing?",
+          "What is the impact of volume and activity level on labour costs?",
+          "What is the difference between relevant and irrelevant costs in labour cost analysis?",
+          "What is the impact of cost behavior on labour cost analysis?",
+          "What is the role of budgeting in labour cost control?",
+          "What is the difference between actual and budgeted labour costs?",
+          "What is the impact of variance analysis on labour cost control?",
+          "How do you calculate labour variances and what do they indicate?",
+          "What is the difference between favorable and unfavorable labour variances?",
+          "What is the role of technology in labour cost management?",
+          "What are the limitations and challenges of labour cost analysis?",
+          "What is the importance of labour cost control in business decision-making?",
+          "What is the role of employee motivation in labour cost management?"
+          ],
+          "overhead costing": ["What are overhead costs and why are they important in business?",
+          "What are the different types of overhead costs?",
+          "How do you classify overhead costs based on their behavior?",
+          "What is the difference between fixed and variable overhead costs?",
+          "What is the difference between direct and indirect overhead costs?",
+          "What is the difference between traditional costing and activity-based costing?",
+          "What is the role of cost drivers in overhead cost allocation?",
+          "How do you calculate the overhead absorption rate and how is it used in costing?",
+          "What is the difference between absorption costing and marginal costing?",
+          "What is the impact of overheads on product pricing and profitability?",
+          "How do you allocate overheads to different products or services?",
+          "What is the role of cost centers and cost pools in overhead cost allocation?",
+          "What is the difference between job costing and process costing?",
+          "What is the impact of volume and activity level on overhead costs?",
+          "What is the difference between relevant and irrelevant costs in overhead analysis?",
+          "What is the impact of cost behavior on overhead cost analysis?",
+          "What is the role of budgeting in overhead cost control?",
+          "What is the difference between actual and budgeted overhead costs?",
+          "What is the impact of variance analysis on overhead cost control?",
+          "How do you calculate overhead variances and what do they indicate?",
+          "What is the difference between favorable and unfavorable overhead variances?",
+          "What is the role of technology in overhead cost management?",
+          "What are the limitations and challenges of overhead cost analysis?",
+          "What is the importance of overhead cost control in business decision-making?",
+          "What is environmental accounting and how does it relate to overhead cost analysis?"
+          ],
+          "cost sheets": ["What is a cost sheet and what is its purpose?",
+          "What are the different components of a cost sheet?",
+          "What is the difference between direct and indirect costs?",
+          "How do you calculate the prime cost and factory cost?",
+          "What is the difference between factory cost and cost of production?",
+          "How do you calculate the cost of goods sold and gross profit?",
+          "What is the role of overheads in cost sheet preparation?",
+          "How do you allocate overhead costs to different products or services?",
+          "What is the difference between absorption costing and marginal costing?",
+          "What is the impact of absorption costing on product pricing and profitability?",
+          "What is the impact of marginal costing on decision making?",
+          "What is the role of break-even analysis in cost sheet preparation?",
+          "How do you calculate the break-even point and what is its significance?",
+          "What is the difference between fixed and variable costs?",
+          "How do you calculate the contribution margin and contribution ratio?",
+          "What is the impact of changes in volume and selling price on contribution and profit?",
+          "What is the role of cost-volume-profit (CVP) analysis in cost sheet preparation?",
+          "What is the difference between cost center and cost object?",
+          "What is the role of cost allocation in cost sheet preparation?",
+          "What is the difference between direct and step-down methods of cost allocation?",
+          "How do you calculate the cost of unused capacity and idle time?",
+          "What is the impact of capacity utilization on cost sheet preparation?",
+          "What is the role of standard costing in cost sheet preparation?",
+          "What is the difference between standard and actual costs?",
+          "How do you calculate and interpret cost variances?",
+          "What is the importance of cost sheet analysis in business decision making?"
+          ]
+         
+        },
+        "CORPORATE ACCOUNTING": {
+          "underwriting of corporate securities": ["What is meant by underwriting of securities?",
+          "What are the types of securities that can be underwritten?",
+          "What is the role of an underwriter in the issuance of securities?",
+          "What are the qualifications and responsibilities of an underwriter?",
+          "What is the difference between firm underwriting and best-efforts underwriting?",
+          "How do underwriters assess the creditworthiness of an issuer?",
+          "What is the process of underwriting an initial public offering (IPO)?",
+          "What is the difference between primary and secondary markets?",
+          "What is the role of underwriters in the secondary market?",
+          "How do underwriters determine the offering price of securities?",
+          "What are the factors that influence the demand for securities in the market?",
+          "What is the difference between oversubscribed and undersubscribed issues?",
+          "What are the risks involved in underwriting of securities?",
+          "What is the difference between underwriting and syndication?",
+          "What is the role of lead underwriters in syndicated underwriting?",
+          "How do underwriters manage the risk of underwriting?",
+          "What are the legal and regulatory requirements for underwriting of securities?",
+          "What is the difference between underwriting and market-making?",
+          "What is the role of book-building in underwriting of securities?",
+          "How do underwriters manage the allocation of securities to investors?",
+          "What is the impact of underwriting on the cost of capital for issuers?",
+          "What is the role of underwriting in the development of financial markets?",
+          "What is the difference between underwriting and private placement?",
+          "What is the impact of underwriting on the liquidity of securities?",
+          "What is the future of underwriting in the digital era?"
+          ],
+          "profit prior to incorporation": ["What is meant by profit prior to incorporation?",
+          "What are the different methods of calculating profit prior to incorporation?",
+          "What is the purpose of calculating profit prior to incorporation?",
+          "What are the legal and accounting requirements for calculating profit prior to incorporation?",
+          "What is the difference between profit prior to incorporation and post-incorporation profit?",
+          "How do you calculate the value of goodwill in profit prior to incorporation?",
+          "What is the impact of profit prior to incorporation on the valuation of a company?",
+          "How do you calculate the value of preliminary expenses in profit prior to incorporation?",
+          "What is the difference between capital profits and revenue profits?",
+          "What is the treatment of capital profits in profit prior to incorporation?",
+          "What is the treatment of revenue profits in profit prior to incorporation?",
+          "What is the impact of revenue reserves on profit prior to incorporation?",
+          "What is the difference between a profit and loss account and a balance sheet?",
+          "How do you prepare a profit and loss account for profit prior to incorporation?",
+          "How do you prepare a balance sheet for profit prior to incorporation?",
+          "What is the difference between a trading account and a profit and loss account?",
+          "How do you calculate the value of inventory in profit prior to incorporation?",
+          "What is the impact of depreciation on profit prior to incorporation?",
+          "What is the difference between straight-line depreciation and reducing balance depreciation?",
+          "How do you calculate the value of fixed assets in profit prior to incorporation?",
+          "What is the impact of deferred revenue expenditure on profit prior to incorporation?",
+          "How do you calculate the value of deferred revenue expenditure in profit prior to incorporation?",
+          "What is the treatment of dividends in profit prior to incorporation?",
+          "What is the difference between capital reserves and revenue reserves?",
+          "How do you calculate the value of capital reserves in profit prior to incorporation?",
+          "What is the impact of contingent liabilities on profit prior to incorporation?"
+          ],
+          "valuvation of goodwill": ["What is goodwill?",
+          "What are the different methods of valuing goodwill?",
+          "What are the factors affecting the valuation of goodwill?",
+          "How do you calculate the value of goodwill using the Average Profit Method?",
+          "How do you calculate the value of goodwill using the Super Profits Method?",
+          "How do you calculate the value of goodwill using the Capitalization Method?",
+          "What is the difference between the Average Profit Method and the Super Profits Method?",
+          "What is the difference between the Super Profits Method and the Capitalization Method?",
+          "What is the difference between the Average Profit Method and the Capitalization Method?",
+          "What is the role of subjective factors in the valuation of goodwill?",
+          "What is the impact of market competition on the valuation of goodwill?",
+          "What is the difference between purchased goodwill and self-generated goodwill?",
+          "How do you treat purchased goodwill in accounting?",
+          "How do you treat self-generated goodwill in accounting?",
+          "What is the impact of amortization on the value of goodwill?",
+          "What is the difference between amortization and depreciation?",
+          "What is the impact of impairment on the value of goodwill?",
+          "How do you calculate the value of impaired goodwill?",
+          "What is the treatment of impaired goodwill in accounting?",
+          "What is the difference between a partnership and a company?",
+          "How do you value goodwill in a partnership?",
+          "How do you value goodwill in a company?",
+          "What is the difference between book value and market value?",
+          "How do you calculate the book value of a company?",
+          "How do you calculate the market value of a company?",
+          "What is the impact of valuation of goodwill on financial statements?"
+          ],
+          "valuvation of securities":["What are securities?",
+          "What are the different types of securities?",
+          "How do you value equity shares?",
+          "How do you value preference shares?",
+          "How do you value bonds?",
+          "What is the difference between face value and market value?",
+          "How do you calculate the face value of a security?",
+          "How do you calculate the market value of a security?",
+          "What is the role of dividends in the valuation of securities?",
+          "How do you calculate the intrinsic value of a security?",
+          "What is the impact of market risk on the valuation of securities?",
+          "What is the impact of interest rate risk on the valuation of securities?",
+          "What is the impact of credit risk on the valuation of securities?",
+          "What is the impact of liquidity risk on the valuation of securities?",
+          "What is the difference between intrinsic value and market value?",
+          "What is the difference between the dividend discount model and the earnings capitalization model?",
+          "How do you calculate the value of a security using the dividend discount model?",
+          "How do you calculate the value of a security using the earnings capitalization model?",
+          "What is the difference between a fundamental analysis and a technical analysis?",
+          "What is the role of market information in the valuation of securities?",
+          "What is the impact of financial statement analysis on the valuation of securities?",
+          "How do you calculate the return on investment for a security?",
+          "What is the difference between yield and return?",
+          "What is the impact of taxation on the valuation of securities?",
+          "What is the difference between short-term and long-term investments?",
+          "How do you make investment decisions based on the valuation of securities?"
+          ],
+          "financial statements of company":[
+           "What is the purpose of financial statements?",
+           "What are the components of financial statements?",
+          "What is the difference between income statement and balance sheet?",
+          "What is the purpose of an income statement?",
+           "What is the purpose of a balance sheet?",
+           "What is the purpose of a statement of cash flows?",
+          "What are the three categories of cash flows in the statement of cash flows?",
+          "What is a retained earnings statement?",
+          "What is the purpose of a retained earnings statement?",
+          "What is the accounting equation?",
+           "What is the formula for calculating net income?",
+           "What is the formula for calculating retained earnings?",
+           "What is the formula for calculating total assets?",
+           "What is the formula for calculating total liabilities?",
+         "What is the formula for calculating owner's equity?",
+          "What is the formula for calculating return on assets?",
+          "What is the formula for calculating return on equity?",
+           "What is the formula for calculating current ratio?",
+           "What is the formula for calculating quick ratio?",
+          "What is the formula for calculating debt-to-equity ratio?",
+           "What is the formula for calculating gross profit margin?",
+          "What is the formula for calculating net profit margin?",
+           "What is the formula for calculating return on investment?",
+           "What is the formula for calculating earnings per share?",
+           "What is the formula for calculating price-to-earnings ratio?",
+          "What are some limitations of financial statements?"
+          
+          ]
+        },
+        "BUSINESS STATISTICS ": {
+          "Introducition to statistics": [
+          "What is statistics and how is it used?",
+          "What are the branches of statistics?",
+          "What are the types of data in statistics?",
+          "What is the difference between descriptive and inferential statistics?",
+          "What is the importance of statistics in research?",
+          "What are the basic concepts of statistics?",
+          "What is a population and how is it different from a sample?",
+          "What is sampling and what are the different sampling techniques?",
+          "What is statistical inference and how is it used?",
+          "What is a hypothesis and how is it formulated?",
+          "What is a null hypothesis and an alternative hypothesis?",
+          "What are the steps involved in hypothesis testing?",
+          "What are the common misconceptions about statistics?",
+          "What is statistical software and how is it used?",
+          "What are the ethical considerations in statistics?",
+          "What is the role of statistics in decision making?",
+          "What is the history of statistics and how has it evolved over time?",
+          "What are the future trends in statistics?",
+          "What are some real-world applications of statistics?",
+          "What are the challenges and limitations of statistics?"
+          ],
+          "measures of central tendencies": ["Define measures of central tendency and explain their importance in statistics.",
+          "What are the different measures of central tendency used in statistics?",
+          "What is the arithmetic mean and how is it calculated?",
+          "What is the mode and how is it calculated?",
+          "What is the median and how is it calculated?",
+          "What is the relationship between mean, median, and mode?",
+          "What are the advantages and disadvantages of using mean as a measure of central tendency?",
+          "What are the advantages and disadvantages of using median as a measure of central tendency?",
+          "What are the advantages and disadvantages of using mode as a measure of central tendency?",
+          "How do you determine which measure of central tendency to use?",
+          "What is weighted mean and how is it calculated?",
+          "What is the geometric mean and how is it calculated?",
+          "What is the harmonic mean and how is it calculated?",
+          "What are the real-world applications of measures of central tendency?",
+          "What are the common misconceptions about measures of central tendency?",
+          "What are the limitations and challenges of measures of central tendency?",
+          "What is the difference between population mean and sample mean?",
+          "What is the difference between weighted mean and arithmetic mean?",
+          "What is the difference between geometric mean and arithmetic mean?",
+          "What is the difference between median and mode?"
+          ],
+         "dispersion": ["What is dispersion in statistics?",
+         "Define range and its limitations as a measure of dispersion.",
+         "What is the interquartile range and how is it calculated?",
+         "What is the standard deviation and how is it calculated?",
+         "What is the coefficient of variation and how is it calculated?",
+         "What is the variance and how is it calculated?",
+         "What are the advantages and disadvantages of using the standard deviation as a measure of dispersion?",
+         "What is the absolute deviation and how is it calculated?",
+         "What is the mean deviation and how is it calculated?",
+         "What is the Lorenz curve and how is it used in statistics?",
+         "What is the Gini coefficient and how is it used in statistics?",
+         "What is the coefficient of skewness and how is it calculated?",
+         "What is the coefficient of kurtosis and how is it calculated?",
+         "What are the properties of a good measure of dispersion?"
+         ],
+         "correlation ": ["What is correlation analysis and how is it used in statistics?",
+         "What are the different types of correlation coefficients?",
+         "What is the Pearson correlation coefficient and how is it calculated?",
+         "What is the Spearman rank correlation coefficient and how is it calculated?",
+         "What is the Kendall's tau correlation coefficient and how is it calculated?",
+         "What is a scatter plot and how is it used in correlation analysis?",
+         "What is the relationship between correlation and causation?",
+         "What is the difference between positive and negative correlation?",
+         "How do you interpret the strength of correlation?",
+         "What is the coefficient of determination and how is it calculated?",
+         "What is the difference between correlation and regression analysis?",
+         "What are the assumptions of correlation analysis?",
+         "What is partial correlation analysis and how is it used?",
+         "What is autocorrelation and how does it affect correlation analysis?",
+         "What is the Durbin-Watson statistic and how is it used in correlation analysis?",
+         "What is the difference between cross-correlation and autocorrelation?",
+         "What are the real-world applications of correlation analysis?",
+         "What are the limitations and challenges of correlation analysis?",
+         "What are the common misconceptions about correlation analysis?",
+         "How do you choose the right correlation coefficient for a given dataset?"
+         ],
+         "regression" :["What is regression analysis and how is it used in statistics?",
+         "What are the different types of regression analysis?",
+         "What is the difference between simple linear regression and multiple regression analysis?",
+         "What are the assumptions of regression analysis?",
+         "How do you interpret the regression coefficients in a linear regression model?",
+         "How do you measure the goodness of fit of a regression model?",
+         "What is the difference between R-squared and adjusted R-squared?",
+         "What is residual analysis in regression?",
+         "What is multicollinearity and how does it affect regression analysis?",
+         "What is heteroscedasticity and how does it affect regression analysis?",
+         "How do you detect outliers in a regression model?",
+         "What is the difference between correlation and regression analysis?",
+         "What is stepwise regression analysis?",
+         "What is logistic regression and how is it used?",
+         "What is the difference between linear and logistic regression?",
+         "What are the applications of regression analysis in business and finance?",
+         "What are the limitations and challenges of regression analysis?",
+         "What is the difference between dependent and independent variables in regression analysis?",
+         "How do you choose the right regression model for a given dataset?",
+         "What are some real-world examples of regression analysis?"
+         ]
+          
+        },
+        "FINANCIAL LITERACY ": {
+          "FOUNDATIONS OF ECONOMICS": [
+          "Explain the major economic reforms in India since 1991?",
+          "What is the role of agriculture in Indian economy?",
+          "What are the key challenges facing Indian economy today?",
+          "What is the impact of globalization on Indian economy?",
+          "What is the difference between inflation and deflation?",
+          "What is the role of Reserve Bank of India in regulating money supply in the economy?",
+          "What are Non-performing assets (NPAs)?",
+          "How does monetary policy impact inflation and economic growth?",
+          "What are the functions of Commercial banks?",
+          "What is the difference between Saving account and Current account?",
+          "What is the role of RBI in regulating banks?",
+          "What are the different types of loans provided by banks?",
+          "What is the difference between Secured and Unsecured loans?",
+          "How are interest rates decided for loans?",
+          "What are the factors that impact interest rates?",
+          "What is the importance of financial planning?",
+          "What are the key components of a financial plan?",
+          "How does financial planning help in achieving financial goals?",
+          "What are the different types of financial instruments?",
+          "What is the difference between stocks and bonds?",
+          "What is the role of diversification in investment portfolio?",
+          "What is the difference between Fixed deposit and Recurring deposit?",
+          "What is the role of insurance in financial planning?",
+          "What is the importance of maintaining a good credit score?",
+          "What are financial statements?",
+          "What are the different types of financial statements?",
+          "What is the purpose of an Income statement?",
+          "How is Gross profit calculated?",
+          "What is the difference between Gross profit and Net profit?",
+          "What is the purpose of a Balance sheet?",
+          "What are the different components of a Balance sheet?",
+          "What is the difference between Assets and Liabilities?",
+          "What is the purpose of a Cash flow statement?",
+          "What are the different components of a Cash flow statement?",
+          "What is the difference between Cash flow and Profit?",
+          "What are the limitations of financial statements?",
+          "What is the difference between short-term and long-term investments?",
+          "What is the role of Mutual funds in investment?",
+          "What is the difference between Debt and Equity Mutual funds?",
+          "What are the different types of Mutual fund schemes?",
+          "What is the role of a Fund manager in managing Mutual fund investments?",
+          "What is the difference between Direct and Regular Mutual fund plans?",
+          "What is the concept of Rupee cost averaging in Mutual fund investments?",
+          "What are the different types of risks in investing?",
+          "How to manage risks in investment portfolio?",
+          "What are the different types of returns in investment?",
+          "What is the difference between Absolute and Annualized returns?",
+          "What is the concept of compounding in investment?",
+          "What is the difference between Simple and Compound interest?",
+          "How does taxation impact investment returns?",
+          "What are the different types of taxes on investments?",
+          "What is the difference between Dividend and Capital gains tax?",
+          "What is the concept of tax exemption and deduction?",
+          "What are the different tax-saving investment options?",
+          "What is the difference between Primary and Secondary market?",
+          "What is an IPO?",
+          "What is the role of Securities and Exchange Board of India (SEBI) in regulating capital markets?",
+          "What is the difference between Stock exchange and Stock market?",
+          "What is the concept of circuit breaker in stock market?",
+          "What are the different types of orders in stock trading?",
+          "What is the difference between Market order and Limit order?",
+          "What is the role of Depository in stock trading?",
+          "What is the concept of Demat account?",
+          "What is the difference between Demat account and Trading account?",
+          "What is the role of a Stock broker in stock trading?",
+          "What is the difference between Full service and Discount brokers?",
+          "What is the concept of Online trading?",
+          "What is the difference between Day trading and Delivery trading?",
+          "What are the different types of securities traded in stock market?",
+          "What is the difference between Blue chip and Penny stocks?",
+          "What is the concept of Market capitalization?",
+          "What is the role of P/E ratio in stock analysis?",
+          "What is the difference between inflation and deflation?",
+          "What is the difference between inflation and deflation?",
+          "What is the significance of the Gross Domestic Product (GDP) in the Indian economy?",
+          "What are the different sectors of the Indian economy?",
+          "What is the role of foreign trade in the Indian economy?",
+          "What is the significance of the Reserve Bank of India (RBI) in the Indian economy?",
+          "What are the different types of taxes in India?",
+          "What is the difference between direct and indirect taxes?",
+          "What is the role of the government in the Indian economy?",
+          "What are the major challenges facing the Indian economy today?",
+          "What is the significance of the agricultural sector in the Indian economy?",
+          "What is the difference between economic growth and economic development?",
+          "What are the major economic policies of the Indian government?",
+          "What is the significance of the service sector in the Indian economy?",
+          "What are the different types of industries in India?",
+          "What is the role of the small-scale sector in the Indian economy?",
+          "What is the significance of the public sector in the Indian economy?",
+          "What are the different types of subsidies given by the Indian government?",
+          "What is the role of foreign investment in the Indian economy?",
+          "What is the significance of the stock market in the Indian economy?",
+          "What are the different types of financial institutions in India? ", 
+          "What is the role of banks in the Indian economy?",
+          "What are the different types of banks in India?",
+          "What is the difference between commercial banks and cooperative banks?",
+          "What is the role of the Reserve Bank of India (RBI) in the Indian banking system?",
+          "What are the major functions of commercial banks in India?",
+          "What are the different types of accounts provided by banks in India?",
+          "What is the difference between savings account and current account?",
+          "What is the role of the National Bank for Agriculture and Rural Development (NABARD) in the Indian banking system?",
+          "What are the different types of loans provided by banks in India?",
+          "What is the difference between secured and unsecured loans?",
+          "What is the role of credit rating agencies in the Indian banking system?",
+          "What is the significance of the Non-Performing Assets (NPA) problem in Indian banking?",
+          "What are the major challenges facing the Indian banking system today?",
+          "What is the role of technology in the Indian banking system?",
+          "What are the different types of electronic banking services provided by banks in India?",
+          "What is the role of the Payment and Settlement Systems Act in the Indian banking system?",
+          "What is the significance of the Financial Resolution and Deposit Insurance (FRDI) Bill?",
+          "What are the major reforms needed in the Indian banking system?",
+          "What is the role of financial inclusion in the Indian banking system?",
+          "What is the significance of the Jan Dhan Yojana in the Indian banking system?", 
+          "What is financial planning?",
+          "What are the different types of financial goals?",
+          "What is the difference between short-term and long-term financial goals?",
+          "What are the major components of a financial plan?",
+          "What is the significance of budgeting in financial planning?",
+          "What are the different types of savings and investment options available in India?",
+          "What is the role of insurance in financial planning?",
+          "What are the different types of insurance"
+          
+          
+          
+          
+          
+          
+          ],
+          "INVESTMENT MANAGEMENT": ["What are the different types of investment products?",
+          "How do investment products differ from each other?",
+          "What is the importance of diversification in investment?",
+          "What is the difference between systematic and unsystematic risk?",
+          "How does inflation affect investment returns?",
+          "What are the different types of investment objectives?",
+          "How can you determine your investment risk profile?",
+          "What are the key factors to consider when selecting an investment product?",
+          "What is the difference between a bull and bear market?",
+          "How do interest rates affect investment returns?",
+          "What is the role of liquidity in investment?",
+          "What are the different types of financial markets?",
+          "How do stock markets work?",
+          "What are the advantages and disadvantages of investing in the stock market?",
+          "What is the difference between fundamental and technical analysis in stock selection?",
+          "How can you determine the value of a stock?",
+          "What is the role of dividends in stock investing?",
+          "What are the key metrics to consider when analyzing a company's financials?",
+          "What is the difference between growth and value stocks?",
+          "What is the importance of sector allocation in stock selection?",
+          "How do macroeconomic factors affect stock market performance?",
+          "What are the different types of bonds?",
+          "How do bond investments differ from stock investments?",
+          "What is the importance of credit rating in bond investing?",
+          "What is the difference between a bond's coupon rate and yield?",
+          "What is the role of duration in bond investing?",
+          "How do macroeconomic factors affect bond market performance?",
+          "What are the different types of mutual funds?",
+          "How do mutual funds work?",
+          "What are the advantages and disadvantages of investing in mutual funds?",
+          "How can you determine the right mutual fund for you?",
+          "What are the different types of exchange-traded funds (ETFs)?",
+          "How do ETFs differ from mutual funds?",
+          "What are the advantages and disadvantages of investing in ETFs?",
+          "How can you determine the right ETF for you?",
+          "What are the different types of real estate investments?",
+          "How do real estate investments differ from other types of investments?",
+          "What are the advantages and disadvantages of investing in real estate?",
+          "How can you determine the right real estate investment for you?",
+          "What is the role of asset allocation in investment planning?",
+          "What are the different asset classes?",
+          "How can you determine the right asset allocation for you?",
+          "What is the difference between active and passive investment strategies?",
+          "What is the importance of rebalancing your portfolio?",
+          "How can you assess the performance of your investment portfolio?",
+          "What is the difference between a market order and a limit order?",
+          "What is the role of a stop-loss order in trading?",
+          "How can you determine the right trading strategy for you?",
+          "What is the difference between a short-term and long-term investment horizon?",
+          "What is the importance of tax planning in investment?",
+          "What are the different types of tax-saving investment options?",
+          "How can you determine the right tax-saving investment for you?",
+          "What is the role of a financial advisor in investment planning?",
+          "How can you find the right financial advisor for you?",
+          "What are the key questions to ask a financial advisor?",
+          "What is the difference between a fee-based and commission-based financial advisor?",
+          "How can you determine the right compensation structure for your financial advisor?",
+          "What are the different types of investment accounts?",
+          "How do investment accounts differ from each other?",
+          "What are the advantages and disadvantages of investing through an investment account?",
+          "What is the importance of monitoring your investment portfolio regularly?",
+          "What are the different types of investment risk?",
+          "How can you mitigate investment risk?",
+          "What are the different types of investment returns?",
+          "How can you calculate investment returns?",
+          "What is the difference between nominal and real investment returns?",
+          "What is the role of inflation in investment returns?",
+          "What is the difference between systematic and unsystematic risk?",
+          "What is the importance of diversification in investment?",
+          "How do you evaluate investment risk?"
+          
+          ],
+          "MUTUAL FUNDS AND FINANCIAL PLANNING ": [
+          
+          
+          
+          
+          "What is a mutual fund?",
+          "What are the different types of mutual funds available in India?",
+          
+          "What are the advantages of investing in mutual funds?",
+          "What are the risks associated with investing in mutual funds?",
+          "What are the factors to consider before investing in a mutual fund?",
+          "How to choose the right mutual fund for your portfolio?",
+          "What is a mutual fund portfolio?",
+          "What is NAV in mutual funds?",
+          "What is a SIP and how does it work in mutual funds?",
+          "What are the different types of SIPs available in mutual funds?",
+          "What is a SWP and how does it work in mutual funds?",
+          "What are the different types of SWPs available in mutual funds?",
+          "What is a STP and how does it work in mutual funds?",
+          "What are the different types of STPs available in mutual funds?",
+          "What is a debt fund?",
+          "What is an equity fund?",
+          "What is a balanced fund?",
+          "What is a liquid fund?",
+          "What is a gilt fund?",
+          "What is an ELSS fund?",
+          "What is a sector fund?",
+          "What is a tax-saving fund?",
+          "What is a fund manager?",
+          "What is a fund's expense ratio?",
+          "What is the benchmark of a mutual fund?",
+          "What is the minimum investment amount required to invest in mutual funds?",
+          "What is a mutual fund house?",
+          "What is a growth plan in mutual funds?",
+          "What is a dividend plan in mutual funds?",
+          "What is a direct plan in mutual funds?",
+          "What is an indirect plan in mutual funds?",
+          "What are the factors to consider before investing in a mutual fund scheme?",
+          "What are the various types of risks associated with mutual fund investments?",
+          "What is the role of SEBI in regulating mutual funds in India?",
+          "What is an Asset Management Company (AMC)?",
+          "What is a custodian in mutual funds?",
+          "What is a registrar and transfer agent in mutual funds?",
+          "What is the role of a distributor in mutual fund investments?",
+          "What is the difference between a mutual fund and a stock?",
+          "What is the difference between a mutual fund and an ETF?",
+          "What is the difference between a mutual fund and a hedge fund?",
+          "What is a dividend payout option in mutual funds?",
+          "What is a dividend reinvestment option in mutual funds?",
+          "What is a bonus option in mutual funds?",
+          "What is a growth option in mutual funds?",
+          "What is a redemption in mutual funds?",
+          "What is the lock-in period in mutual funds?",
+          "What is the exit load in mutual funds?",
+          "What is the expense ratio in mutual funds?",
+          "What is the difference between gross and net expense ratio in mutual funds?",
+          "What is the tracking error in mutual funds?",
+          "What is an index fund?",
+          "What is an exchange-traded fund (ETF)?",
+          "What is a closed-ended mutual fund?",
+          "What is an open-ended mutual fund?",
+          "What is an interval mutual fund?",
+          "What is the difference between an open-ended and a closed-ended mutual fund?",
+          "What is a systematic investment plan (SIP)?",
+          "What is a systematic withdrawal plan (SWP)?",
+          "What is a Systematic Transfer Plan (STP)?",
+          "What is a lump sum investment?",
+          "What is the importance of financial planning?",
+          "What is the difference between financial planning and budgeting?",
+          "What is the role of a financial planner?",
+          "What are the different types of financial goals?",
+          "What is a budget?",
+          "What is the difference between fixed and flexible budget?",
+          "What is a cash budget?",
+          "What is a capital budget?",
+          "What is a master budget?",
+          "What is a rolling budget?",
+          "What are the different types of budgeting techniques?",
+          "What is zero-based budgeting?",
+          "What is incremental budgeting?",
+          "What is activity-based budgeting?",
+          "What is the difference between a budget and a forecast?",
+          "What is a personal budget?",
+          "What is a family budget?",
+          "What are the different ways to save money?",
+          "What is the importance of saving money?",
+          "What are the benefits of budgeting?",
+          "What are the risks of not having a budget?"
+          ]
+        },
+        "CONSTITUTION OF INDIA ": {
+          "MAKING OF INDIAN CONSTITUTION  ": ["What is the making of the Indian Constitution?", "What are the features of the Indian Constitution?", "What is the preamble of the Indian Constitution?", "What are the fundamental rights enshrined in the Indian Constitution?", "What are the fundamental duties enshrined in the Indian Constitution?", "What are the directive principles of state policy in the Indian Constitution?", "What is the difference between fundamental rights and directive principles?", 
+          "what is the significance of the Indian Constitution for India's socio-economic development?", "What is the role of the Election Commission in India under the Indian Constitution?", "What is the role of the Attorney General of India under the Indian Constitution?", "What is the procedure for amending the Indian Constitution?", "What is the significance of the Indian Constitution for India's federal structure?", "What is the role of the Governor in the Indian Constitution?", "What is the role of the Chief Justice of India under the Indian Constitution?", "What are the challenges faced by the Indian Constitution in ensuring social justice?", "What is the significance of the Indian Constitution for promoting gender equality?", "What is the role of the National Human Rights Commission in upholding human rights under the Indian Constitution?", "What is the significance of the Indian Constitution for protecting the environment?", "What are the constitutional safeguards for the protection of minority rights in India?", "What is the significance of the Indian Constitution for ensuring religious freedom?", "What is the role of the Central Bureau of Investigation (CBI) under the Indian Constitution?", "What is the significance of the Indian Constitution for promoting inclusive growth?", "What is the role of the Planning Commission in India under the Indian Constitution?", "What is the significance of the Indian Constitution for ensuring good governance?", "What are the constitutional safeguards for protecting the rights of women in India?", "What is the role of the Union Public Service Commission (UPSC) under the Indian Constitution?", "What is the significance of the Indian Constitution for promoting social welfare?", "What is the role of the Comptroller and Auditor General (CAG) in India under the Indian Constitution?", "What is the significance of the Indian Constitution for promoting economic growth?", "What is the role of the Finance Commission in India under the Indian Constitution?", "What are the constitutional safeguards for the protection of children's rights in India?", "What is the significance of the Indian Constitution for promoting cultural diversity?", "What is the role of the National Commission for Women in India under the Indian Constitution?", "What is the significance of the Indian Constitution for promoting scientific research?", "What is the role of the National Green Tribunal in India under the Indian Constitution?", "What are the constitutional safeguards for the protection of the rights of indigenous people in India?", "What is the significance of the Indian Constitution for promoting entrepreneurship?", "What is the role of the National Commission for Scheduled Tribes in India under the Indian Constitution?", "What is the significance of the Indian Constitution for promoting educational opportunities?", "What is the role of the National Commission for Scheduled Castes in India under the Indian Constitution?"],
+          "UNION GOVERNMENT AND STATE GOVERNMENT": ["What is the difference between the Union Government and State Government?",
+          "What are the three organs of the government and what is their role in the Union Government?",
+          "Who is the head of the Union Government and who is the head of the State Government?",
+          "What is the role of the President in the Union Government?",
+          "What is the role of the Governor in the State Government?",
+          "What is the difference between the Council of Ministers and Cabinet?",
+          "What is the role of the Prime Minister in the Union Government?",
+          "What is the role of the Chief Minister in the State Government?",
+          "What are the different types of government departments and agencies?",
+          "What is the role of the Indian Parliament in the Union Government?",
+          "What is the role of the Legislative Assembly in the State Government?",
+          "What is the difference between a Union Territory and a State?",
+          "What is the role of the Election Commission in the Union Government?",
+          "What is the role of the State Election Commission in the State Government?",
+          "What is the difference between a unicameral and bicameral legislature?",
+          "What is the role of the Comptroller and Auditor General (CAG) in the Union Government?",
+          "What is the role of the State Finance Commission in the State Government?",
+          "What is the difference between a political party and a pressure group?",
+          "What is the role of the Central Bureau of Investigation (CBI) in the Union Government?",
+          "What is the role of the Central Vigilance Commission (CVC) in the Union Government?",
+          "What is the role of the Right to Information (RTI) in the Union Government?",
+          "What is the role of the Lokpal and Lokayukta in the Union and State Governments?",
+          "What is the role of the National Human Rights Commission (NHRC) in the Union Government?",
+          "What is the role of the State Human Rights Commission (SHRC) in the State Government?",
+          "What is the role of the National Commission for Women (NCW) in the Union Government?",
+          "What is the role of the National Commission for Minorities (NCM) in the Union Government?",
+          "What is the role of the National Commission for Scheduled Castes (NCSC) in the Union Government?",
+          "What is the role of the National Commission for Scheduled Tribes (NCST) in the Union Government?",
+          "What is the role of the National Green Tribunal (NGT) in the Union Government?",
+          "What is the role of the National Disaster Management Authority (NDMA) in the Union Government?",
+          "What is the role of the National Human Rights Commission (NHRC) in the Union Government?",
+          "What is the role of the National Commission for Backward Classes (NCBC) in the Union Government?",
+          "What is the role of the State Minority Commission in the State Government?",
+          "What is the role of the State Women's Commission in the State Government?",
+          "What is the role of the State Backward Classes Commission in the State Government?",
+          "What is the role of the State Human Rights Commission in the State Government?",
+          "What is the role of the District Magistrate in the State Government?",
+          "What is the role of the Sub-Divisional Magistrate in the State Government?",
+          "What is the role of the Tehsildar in the State Government?",
+          "What is the role of the Patwari in the State Government?",
+          "What is the role of the Gram Panchayat in the State Government?",
+          "What is the role of the Municipal Corporation in the State Government?",
+          "What is the role of the Zilla Parishad in the State Government?",
+          "What is the role of the State Legislative Council in the State Government?",
+          "What is the role of the State Election Commission in the State Government?",
+          "What is the role of the State Planning Commission in the State Government?",
+          "What is the role of the State Finance Commission in the State Government?",
+          "What is the role of the State Public Service Commission in the State Government?"],
+          "JUDICIAL AND ELECTROL PROCESS": ["What is the structure of the Indian judiciary system?", "What are the qualifications to become a judge in India?", "What is the role of the Supreme Court in India?", "What is the role of the High Court in India?", "What is the difference between civil and criminal cases in India?", "What is the process of appointment of judges in India?", "What is the role of the Election Commission in India?", "What is the process of conducting elections in India?", "What is the role of the President of India?","what is the role  of the Prime Minister of India?", "What is the role of the Parliament of India?", "What are the different types of bills in India?", "What is the process of passing a bill in India?", "What is the role of the Rajya Sabha in India?", "What is the role of the Lok Sabha in India?", "What is the difference between a motion and a resolution in India?", "What is the role of the Speaker of the Lok Sabha?", "What is the role of the Leader of the Opposition in the Parliament of India?", "What is the role of the Chief Minister in India?", "What is the role of the Governor in India?", "What is the difference between a unicameral and bicameral legislature?", "What are the functions of the state government in India?", "What is the relationship between the union and state governments in India?", "What is the role of the Attorney General of India?", "What is the role of the Solicitor General of India?", "What is the role of the Advocate General of a state in India?", "What is the difference between the writs of Habeas Corpus and Mandamus?", "What is the difference between the writs of Certiorari and Prohibition?", "What is the role of the National Human Rights Commission in India?", "What is the role of the State Human Rights Commission in India?", "What are the fundamental rights granted by the Indian Constitution?", "What are the directive principles of state policy in India?", "What are the fundamental duties of Indian citizens?", "What is the preamble of the Indian Constitution?", "What is the significance of the words 'socialist' and 'secular' in the preamble of the Indian Constitution?", "What are the powers of the President of India in relation to the judiciary?", "What is the procedure for impeachment of the President of India?", "What is the procedure for removal of a judge of the Supreme Court in India?", "What is the procedure for removal of a judge of the High Court in India?", "What is the role of the Public Service Commission in India?", "What is the procedure for appointment of members of the Public Service Commission?", "What are the qualifications to become a member of the Public Service Commission in India?", "What is the role of the Central Vigilance Commission in India?", "What is the role of the Central Information Commission in India?", "What is the role of the State Information Commission in India?", "What is the difference between the Chief Election Commissioner and the Election Commissioners in India?", "What is the role of the Comptroller and Auditor General of India?", "What is the role of the Finance Commission in India?", "What is the role of the National Commission for Scheduled Castes in India?", "What is the role of the National Commission for Scheduled Tribes in India?", "What is the role of the National Commission for Women in India?", "What is the role of the National Commission for Minorities in India?", "What is the role of the National Commission for Backward Classes in India?", "What is the role of the National Green Tribunal in India?", "What is the role of the National Human Rights Commission in India?"]
+        },
+        "VANIJYA SOURABHA -KANNADA": {
+        
+          "SPECIAL NOTE": ["FOR KANNADA ALL THE CHAPTERS SHOULD BE STUDIED AS PER THE THE BCU NEP VANIJYA SAURABHA BOOK AND SHOULD HAVE TO FOLLOW THE BELOW METHOD OF STUDYING"],
+          "TECHNIQUES ":["READING STORY","UNDERSTANDING CHARACTERS ","ANALYSIS OF STORY AS SUMMARY ","REVISON MODULE ","PRESENTATION AS REQUIRED IN QUESTION PAPER "]
+        },
+        "GENERIC ENGLISH ": {
+          "THEORY ": ["DANCE LIKE A MAN -FULL SUMMARY"],
+          "persuaive speeches ": ["Is social media a boon or a bane for society?",
+          "Should the government provide free healthcare for all citizens?",
+          "Is technology making our lives better or worse?",
+          "Should the minimum wage be increased?",
+          "Is homeschooling better than traditional schooling?",
+          "Should college be free for all students?",
+          "Is climate change a real threat or a hoax?",
+          "Should animal testing be banned?",
+          "Is the death penalty justified?",
+          "Should tobacco products be banned?",
+          "Is fast food responsible for obesity?",
+          "Should the drinking age be lowered?",
+          "Is gun control necessary?",
+          "Should the government provide free education for all students?",
+          "Is it ethical to clone humans?",
+          "Should marijuana be legalized?",
+          "Is censorship necessary in modern society?",
+          "Should genetically modified foods be banned?",
+          "Is space exploration worth the cost?",
+          "Should parents be held responsible for their children's actions?",
+          "Is it ethical to use animals for scientific research?",
+          "Should the voting age be lowered?",
+          "Is there a gender pay gap?",
+          "Should the government regulate the internet?",
+          "Is social media addiction a real problem?",
+          "Should zoos be banned?",
+          "Is it ethical to use performance-enhancing drugs in sports?",
+          "Should parents be allowed to choose their child's gender?",
+          "Is it ethical to have a monopoly in business?",
+          "Should we be concerned about the impact of artificial intelligence on employment?"],
+          "presentation skills ": ["What are some key elements of an effective presentation?",
+          "How can you engage your audience during a presentation?",
+          "What are some common mistakes to avoid when giving a presentation?",
+          "What is the importance of body language in a presentation?",
+          "How can you use visual aids effectively in a presentation?",
+          "How can you tailor your presentation to different audiences?",
+          "What are some techniques for managing nervousness during a presentation?",
+          "How can you use storytelling to enhance your presentation?",
+          "What are some strategies for creating a memorable conclusion to a presentation?",
+          "How can you handle questions effectively during a presentation?",
+          "What are some best practices for using slides in a presentation?",
+          "How can you effectively use your voice to convey your message during a presentation?",
+          "What are some strategies for keeping your audience's attention during a presentation?",
+          "How can you use humor appropriately in a presentation?",
+          "What are some ways to practice and prepare for a presentation?",
+          "How can you establish credibility with your audience during a presentation?",
+          "What are some techniques for creating a clear and concise presentation?",
+          "How can you use props effectively in a presentation?",
+          "What are some best practices for delivering a virtual presentation?",
+          "How can you incorporate data and statistics into a presentation?",
+          "What are some techniques for creating an engaging introduction to a presentation?",
+          "How can you use audience participation to enhance your presentation?",
+          "What are some strategies for adapting your presentation to unexpected circumstances?",
+          "How can you effectively use handouts in a presentation?",
+          "What are some techniques for creating a powerful opening statement in a presentation?",
+          "How can you use repetition effectively in a presentation?",
+          "What are some best practices for delivering a presentation remotely?",
+          "How can you establish rapport with your audience during a presentation?",
+          "What are some strategies for dealing with difficult or hostile audience members during a presentation?"], 
+          "Introduction to writing": ["Describe the writing process.",
+          "What are some common writing mistakes and how can you avoid them?",
+          "How can you improve your writing skills?",
+          "Explain the importance of prewriting in the writing process.",
+          "What is the difference between a topic sentence and a thesis statement?",
+          "What is the purpose of an outline and how can it help with writing?",
+          "Explain the difference between a formal and informal writing style.",
+          "What are some common grammatical errors and how can you correct them?",
+          "How can you use strong verbs and adjectives to improve your writing?",
+          "What is the purpose of a conclusion in an essay or paper?",
+          "How can you effectively use transitions in your writing?",
+          "What are some tips for writing an effective introduction?",
+          "How can you avoid plagiarism in your writing?",
+          "What are some effective strategies for editing and revising your writing?",
+          "What are some common citation styles used in academic writing?",
+          "How can you improve your writing speed without sacrificing quality?",
+          "What is the importance of audience and purpose in writing?",
+          "What are some common types of essays and how do they differ?",
+          "How can you effectively use quotations and paraphrasing in your writing?",
+          "Explain the difference between active and passive voice in writing.",
+          "What are some strategies for staying motivated while writing?",
+          "What is the importance of proofreading your work?",
+          "What are some tips for writing a strong thesis statement?",
+          "How can you effectively structure an argument in your writing?",
+          "Explain the difference between denotation and connotation in writing.",
+          "How can you use rhetorical devices to enhance your writing?",
+          "What is the role of research in the writing process?",
+          "What are some common challenges of writing and how can you overcome them?",
+          "How can you use feedback to improve your writing?",
+          "What is the role of critical thinking in effective writing?"],
+          "Business correspondence":["What is the purpose of business correspondence?",
+          "What are the types of business correspondence?",
+          "What is the difference between formal and informal business correspondence?",
+          "What are the key elements of a business letter?",
+          "How do you address a business letter?",
+          "What is the importance of tone in business correspondence?",
+          "What are the common mistakes to avoid in business correspondence?",
+          "What are the guidelines for writing effective emails?",
+          "How can you make your business correspondence more concise and clear?",
+          "What is the importance of proofreading in business correspondence?",
+          "What are the different formats for business correspondence?",
+          "How can you write an effective cover letter?",
+          "What is the structure of a business report?",
+          "What are the steps involved in writing a business report?",
+          "How do you write an effective proposal?",
+          "What are the elements of a successful sales letter?",
+          "How can you write an effective thank-you letter?",
+          "What are the key components of a resume?",
+          "How do you write an effective follow-up email?",
+          "What are the common errors to avoid in business writing?",
+          "How can you use persuasive language in your business writing?",
+          "How do you write a successful complaint letter?",
+          "What are the different types of business reports?",
+          "What is the importance of using active voice in business writing?",
+          "How can you use headings and subheadings to organize your business writing?",
+          "What are the guidelines for writing a professional memo?",
+          "How do you write an effective press release?",
+          "How can you use bullet points to improve your business writing?",
+          "What is the difference between a memo and a letter?"],
+          "commercial reporting":["Explain the purpose of commercial writing.", "What are the common types of commercial writing?", "What is a sales letter?", "What is an order letter?", "What is a complaint letter?", "What is a request letter?", "What is an inquiry letter?", "What are the components of a business letter?", "What is a memo?", "What is a report?", "What is a proposal?", "What is an executive summary?", "What are the different types of business reports?", "What are the elements of a successful business proposal?", "How do you write a persuasive sales letter?", "What is the difference between an order letter and a request letter?", "How do you write an effective complaint letter?", "What is the tone of a business letter?", "What is the purpose of a memo?", "What is the structure of a memo?", "How do you write an effective memo?", "What are the different types of business proposals?", "What are the key components of a business report?", "How do you write an executive summary?", "What is the difference between an informational report and an analytical report?", "What is the importance of proofreading and editing in commercial writing?", "How can you ensure that your commercial writing is clear and concise?", "What are some common pitfalls to avoid in commercial writing?", "How can you improve your commercial writing skills over time?"]
+
+
+
+
+          
+        }
+      };
+
+      // populate subjects dropdown
+      for (const subject in questions) {
+        const option = document.createElement("option");
+        option.value = subject;
+        option.text = subject;
+        subjectSelect.add(option);
+      }
+
+      // add event listener for subject dropdown
+      subjectSelect.addEventListener("change", populateChapterDropdown);
+
+      // function to populate chapter dropdown
+      function populateChapterDropdown() {
+      const selectedSubject = subjectSelect.value;
+      chapterSelect.length = 0; // clear chapter dropdown
+      questionSelect.length = 0; // clear question dropdown
+      chapterSelect.disabled = false; // enable chapter dropdown
+      
+      const chapters = Object.keys(questions[selectedSubject]);
+      for (const chapter of chapters) {
+      const option = document.createElement("option");
+      option.value = chapter;
+      option.text = chapter;
+      chapterSelect.add(option);
+      }
+      
+      // add event listener for chapter dropdown
+      chapterSelect.addEventListener("change", populateQuestionDropdown);
+      }
+      
+      // function to populate question dropdown
+      function populateQuestionDropdown() {
+      const selectedSubject = subjectSelect.value;
+      const selectedChapter = chapterSelect.value;
+      questionSelect.length = 0; // clear question dropdown
+      questionSelect.disabled = false; // enable question dropdown
+      
+      const questionsForChapter = questions[selectedSubject][selectedChapter];
+      for (const question of questionsForChapter) {
+      const option = document.createElement("option");
+      option.value = question;
+      option.text = question;
+      questionSelect.add(option);
+      }
+      }
+      </script><br><br><br><br>
+<a href="oo.pdf" download>Download PDF (3rd sem question papers)</a>
+
+
+  
+  <br /><br><br><br><br>
+      <div id="ko" ><code>DESIGNED AND DEVELOPED BY NANDISH BC <br>
+      2ND BCOM ' B' SECTION ID-U18CW21C0134<br>-------FRONTEND DEVELOPER ---------<br> </div>
+      </div>
+      </body></body>
